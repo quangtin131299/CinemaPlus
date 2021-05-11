@@ -1,0 +1,155 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container
+      .card
+        .card-body
+          .row
+            .col-sm-7
+              h1.text-center(style='color: #000000;') Ch&#x1ECD;n gh&#x1EBF;
+              - var idghe = 0;
+              - var indexrow = 0;
+              - var rows = ['A', 'B', 'C', 'D', 'E', 'F','G', 'H', 'I']
+              - for(var i=1; i <= 3; i++){
+                - for(var j = 1; j <= 3; j++){
+                    if i == 1
+                      if j == 2 || j == 1
+                        .row
+                          .col-sm-1
+                            h5= rows[indexrow]
+                          .col-sm-1
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe, id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event) ')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-2
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                          .col-sm-1
+                            h5= rows[indexrow++]
+                      else
+                        .row
+                          .col-sm-1
+                            h5= rows[indexrow]
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID ,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-2
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                          .col-sm-1
+                            h5= rows[indexrow++]           
+                    else
+                      .row
+                        .col-sm-1
+                          h5= rows[indexrow]
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-2
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID, src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          img(class=ghes[idghe].TenGhe,id=ghes[idghe++].ID,src='images/seattrong.png' onclick='clickimgaghe(event)')
+                        .col-sm-1
+                          h5= rows[indexrow++]            
+                - }
+                  br   
+                  br
+              - }
+
+              .row(style='padding: 15px 15px 15px 15px;')
+                .col-sm-12(style='height: 100px ; border-left: 45px solid transparent; border-right: 45px solid transparent; border-bottom: 100px solid #555;')
+                  h1.text-center(style='position: relative; top: 30px;color: aliceblue;') M&agrave;n h&igrave;nh
+            .col-sm-1(style='display: flex; align-items: flex-start; justify-content: center;')
+              div(style='border-left: 1px solid green;height: 500px;')
+            .col-sm-4
+              h1.text-center(style='color: #000000;') Ch&uacute; th&iacute;ch
+              .row
+                .col-sm-2
+                  img(src='images/seatchon.png')
+                .col-sm-8
+                  p.text-left Gh&#x1EBF; &dstrok;&atilde; ch&#x1ECD;n
+              .row
+                .col-sm-2
+                  img(src='images/seatdadat.png')
+                .col-sm-8
+                  p.text-left Gh&#x1EBF; &dstrok;&atilde; &dstrok;&#x1EB7;t
+              .row
+                .col-sm-2
+                  img(src='images/seattrong.png')
+                .col-sm-8
+                  p.text-left Gh&#x1EBF; Tr&#x1ED1;ng
+              br
+              .row
+                .col-sm-6(style='display: flex; justify-content: center;')
+                  button.btn.btn-success(id="btnNext",type='button') B&#x1B0;&#x1EDB;c k&#x1EBF; ti&#x1EBF;p
+                .col-sm-6(style='display: flex; justify-content: center;')
+                  button.btn.btn-dark(type='button') Quay l&#x1EA1;i
+              br
+              br
+              .row
+                .col-sm-4
+                  img(src='https://www.galaxycine.vn/media/c/o/cogai_2.jpg' width='100' height='200')
+                .col-sm-8
+                  .row
+                    .col-sm-4
+                      h4 R&#x1EA1;p: 
+                    .col-sm-8
+                      p(class="idrap",id=phong.ID_Rap)= phong.TenRap
+                  .row
+                    .col-sm-4
+                      h4 Ph&ograve;ng: 
+                    .col-sm-8
+                      p(class="idphong",id=phong.ID)= phong.TenPhong 
+                  .row
+                    .col-sm-4
+                      h4 Phim: 
+                    .col-sm-8
+                      p(class="idphim" ,id=phong.ID_Phim)= phong.TenPhim
+                  .row
+                    .col-sm-4
+                      h4(style='color: #f20;') Gh&#x1EBF;: 
+                    .col-sm-8
+                      p(id="ptenghe",style='color: #f20;')
+                  .row
+                    .col-sm-4
+                      h4 Th&#x1EDD;i gian: 
+                    .col-sm-8
+                      p= phong.Gio
+
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptHome/scriptindex.js")
+script(src="javascripts/scriptGhePhong/script.js")
+script(src="javascripts/scriptUtil/script.js") 

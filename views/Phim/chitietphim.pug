@@ -1,0 +1,89 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container
+      .page
+        .breadcrumbs
+          a(href='index.html') Home
+          a(href='review.html') Movie Review
+          span The Croods
+        .content
+          - if(phimchitiet){
+            .row
+              .col-md-6
+                figure.movie-poster(style='display: flex; justify-content: center;')
+                  img(width='360' height='500' src=phimchitiet.Hinh alt='#')
+              .col-md-6
+                h2.movie-title= phimchitiet.TenPhim
+                ul.movie-meta
+                  li
+                    strong &Dstrok;&aacute;nh gi&aacute;:
+                    .star-rating(title='Rated 4.00 out of 5')
+                      span(style='width:80%')
+                        strong.rating 4.00
+                        |  out of 5
+                  li
+                    strong Th&#x1EDD;i gian chi&#x1EBF;uchi&#x1EBF;u:
+                    |  #{phimchitiet.ThoiGian} min
+                  li
+                    strong Ng&agrave;y kh&#x1EDF;i chi&#x1EBF;u:
+                    | #{phimchitiet.NgayKhoiChieu}
+                  li
+                    strong Th&#x1EC3; lo&#x1EA1;i:
+                    | #{phimchitiet.TenLoai}
+                ul.starring
+                  li
+                    .row
+                      .col-sm-6
+                        button.btn.btn-success(type='button' data-toggle='modal' data-target='#exampleModal' style='width: 150px;')
+                          | &Dstrok;&#x1EB7;t
+                          | v&eacute;
+                        #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                          .modal-dialog.modal-xl
+                            .modal-content
+                              .modal-header
+                                h5#exampleModalLabel.modal-title
+                                  | Ch&#x1ECD;n su&#x1EA5;t
+                                  | chi&#x1EBF;u trong rap
+                                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                  span(aria-hidden='true') &times;
+                              .modal-body
+                                div
+                                  .row
+                                    .col-sm-3
+                                      p(style='height: 100%; display: flex; align-items: center; color: red;')
+                                        | Ch&#x1ECD;n ngay &dstrok;&#x1EB7;t v&eacute;:
+                                    .col-sm-9
+                                      input.form-control(id="txtngaydat" type='date' placeholder='Ngày đặt vé' aria-label='Username' aria-describedby='basic-addon1')
+                                hr
+                                each scitem in listsc
+                                  if scitem.Gio.length != 0
+                                    div
+                                    h1= scitem.TenRap
+                                    div(style='display: flex; flex-direction: row; ')
+                                      each itemgio in scitem.Gio
+                                        .text-center(style='margin-left: 10px; display:flex; justify-content: center; align-items: center;width: 100px; height: 25px; border: 1px solid red;')
+                                          a(class="thoigian",id=itemgio.ID,href=`/chonghe/index?idsuat=${itemgio.ID}&idrap=${scitem.ID}&idphim=${phimchitiet.ID}`)= itemgio.Gio
+                                    hr
+                                    hr
+            // .row
+            div
+              h1 M&ocirc; t&#x1EA3; phim
+            .entry-content
+              p
+                = phimchitiet.MoTa
+            div
+              h1 Trailer phim
+              div
+                iframe(width='100%' height='400' src='https://www.youtube.com/embed/'+ phimchitiet.Trailer , frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+- }
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptHome/scriptindex.js") 
+script(src="javascripts/chitietphim/script.js") 
+
+

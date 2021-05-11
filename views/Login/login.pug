@@ -1,0 +1,57 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container(style='width: fit-content; height: 350px;')
+      form(action="xulydangnhap", method="post") 
+        .card(style='height: 100%;')
+          .card-body
+            .row
+              .col-sm-12
+                .row
+                  .col-sm-12.text-center
+                    h1(style='color: red;') &Dstrok;&abreve;ng nh&#x1EAD;p
+                form(action='' method='post')
+                  br
+                  .row
+                    .col-sm-4
+                      h4(style='display: flex; align-items: center; height: 100%;')
+                        | T&ecirc;n &dstrok;&abreve;ng nh&#x1EAD;p:
+                    .col-sm-8
+                      input#inputPassword.form-control(name="txtusername", type='text')
+                  br
+                  .row
+                    .col-sm-4
+                      h4(style='display: flex; align-items: center; height: 100%;')
+                        | M&#x1EAD;t kh&#x1EA9;u:
+                    .col-sm-8
+                      input#inputPassword.form-control(name="txtpassword", type='password')
+                  br
+                  br
+                  .row
+                    .col-sm-12
+                      p
+                        | N&#x1EBF;u b&#x1EA1;n ch&#x1B0;a c&oacute; t&agrave;i kho&#x1EA3;n ? 
+                        a(href='/dangky/getdangky') &Dstrok;&abreve;ng k&yacute;
+                  .row
+                    .col-sm-6.text-center
+                      button.btn.btn-success(type='submit' style='width:200px;')
+                        | &Dstrok;&abreve;ng
+                        | nh&#x1EAD;p
+                    .col-sm-6.text-center
+                      button.btn.btn-dark(type='button' style='width:200px;')
+                        | H&#x1EE7;y b&#x1ECF;
+    // .container
+  include ../Utils/footer.pug
+// Default snippet for navigation
+script(src='javascripts/jquery-1.11.1.min.js')
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptLogin/script.js")
+script(src="javascripts/scriptUtil/script.js") 
+script. 
+  let msg = "#{message}";
+  if(msg){
+    alert(msg)
+  }

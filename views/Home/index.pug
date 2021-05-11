@@ -1,0 +1,98 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container
+      .page
+        .row
+          .col-sm
+            .slider
+              ul.slides
+                li
+                  a(href='#')
+                    img(src='https://www.cgv.vn/media/banner/cache/1/b58515f018eb873dafa430b6f9ae0c1e/r/s/rsz_t_j_ctkc_rollingbanner_980x448px_1.jpg' alt='Slide 1')
+                li
+                  a(href='#')
+                    img(src='https://www.cgv.vn/media/banner/cache/1/b58515f018eb873dafa430b6f9ae0c1e/h/a/happy-new-year-980x448_1.png' alt='Slide 2')
+                li
+                  a(href='#')
+                    img(src='https://www.cgv.vn/media/banner/cache/1/b58515f018eb873dafa430b6f9ae0c1e/k/v/kv_980x448.jpg' alt='Slide 3')
+        // .row
+      .row(style='background: url(images/bg_h3_line.jpg) repeat-x scroll left center rgba(0, 0, 0, 0);')
+        div(style='background-color: #ffffff; padding-left: 10px; padding-right: 10px; margin: 0px auto;')
+          img(src='images/h3_movie_selection.gif')
+      .row
+        .col-sm-12(style='height: fit-content;')
+          .bbb_viewed
+            .row
+              .col-sm-12
+                .bbb_main_container
+                  .bbb_viewed_title_container
+                    .bbb_viewed_nav_container
+                      .bbb_viewed_nav.bbb_viewed_prev
+                        i.fas.fa-chevron-left
+                      .bbb_viewed_nav.bbb_viewed_next
+                        i.fas.fa-chevron-right
+                  .bbb_viewed_slider_container
+                    .owl-carousel.owl-theme.bbb_viewed_slider
+                      - if(!listPhimDC){
+                          h1(class="text-center") Không thể load phim
+                      - }else{
+                          each phim in listPhimDC
+                            .owl-item
+                              .temp(style='width: 270px; margin-right: 0px; height: 400px;')
+                                img(src=phim.Hinh width='270' height='400')
+                                .row.abc(style='position: relative; top: -399px;')
+                                  .col-sm-12
+                                    a#a(data-toggle='modal' data-target='#exampleModal')
+                                      img(class="imgtrailer",id=phim.Trailer, src='https://www.cgv.vn/skin/frontend/cgv/default/images/bg-transparent-grey.png')
+                                .row.abc(style=' height: 100px; background: url(images/bg-black-transparent.png);z-index: 999; position: relative; top: -500px;; left: 15px; width: 270px;')
+                                  .col-sm-12
+                                    .row
+                                      .col-sm-12(style='height: 50px ;display: flex; align-items: center;')
+                                        h4(style='position: relative; top: 15px; color: #FFFFFF; font-size: 14px; text-transform: uppercase')
+                                          = phim.TenPhim
+                                    .row(style='position: relative; top: 8px;')
+                                      .col-sm-6(style='display: flex; align-items: center; justify-content: center;  padding: 0px 0px 0px 0px; margin-bottom: 5px;')
+                                        button.btn.btn-secondary(class="btnXemChiTiet",id=phim.ID, style='text-transform: uppercase;' type='button')
+                                          | Xem
+                                          | chi ti&#x1EBF;t
+                                      .col-sm-6(style='display: flex; align-items: center; justify-content: center; padding: 0px 0px 0px 0px; margin-bottom: 5px;')
+                                        button.btn.btn-secondary(style='width: 120px;' type='button')
+                                          .row
+                                            div(style='width: fit-content; position: relative; top: 0.5px; left: 10px; border: 1px solid red;')
+                                              img(src='images/bg-cate-booking.png' alt='photo' width='9' height='23')
+                                            .col-sm(style='text-transform: uppercase; font-size: 15px;')
+                                              | &dstrok;&#x1EB7;t v&eacute;
+                      - }
+                      
+ 
+          #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+            .modal-dialog.modal-lg
+              .modal-content
+                .modal-body
+                  iframe#video(width='100%' height='480' src='https://www.youtube.com/embed/MzuI--9WRqo' frameborder='0' allow='clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                .modal-footer
+                  button.btn.btn-primary(type='button') D&#x1EEB;ng xem
+          // </div>
+      .row(style='background: url(images/bg_h3_line.jpg) repeat-x scroll left center rgba(0, 0, 0, 0);')
+        div(style='background-color: #ffffff; padding-left: 10px; padding-right: 10px; margin: 0px auto;')
+          img(src='images/h3_event.png')
+      br
+      br
+      .row(style='display: flex; justify-content: center;')
+        div(style='margin-right: 3px; border: 3px solid black; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;')
+          img(src='https://www.cgv.vn/media/wysiwyg/packages/214x245.jpg')
+        div(style='margin-right: 3px; border: 3px solid black; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;')
+          img(src='https://www.cgv.vn/media/wysiwyg/2021/012021/U22-496x247-01.jpg')
+        div(style='margin-right: 3px; border: 3px solid black; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;')
+          img(src='https://www.cgv.vn/media/wysiwyg/2019/DEC2019/LATE-SHOW-NEW-12.2019-214x245.jpg')
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(id="user-source",src="javascripts/scriptHome/scriptindex.js", data-user=JSON.stringify(user))
+script(src="javascripts/scriptUtil/script.js") 
+
+

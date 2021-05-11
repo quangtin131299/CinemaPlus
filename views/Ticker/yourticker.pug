@@ -1,0 +1,77 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container
+      h1.text-center(style='color: #000000;') V&eacute; c&#x1EE7;a b&#x1EA1;n
+      - if(listTicker){
+          table.table.table-bordered
+              thead
+                tr
+                  th.text-center(scope='col') #
+                  th.text-center(scope='col') V&eacute; c&#x1EE7;a b&#x1EA1;n
+                  th.text-center(scope='col') Ng&agrave;y &dstrok;&#x1EB7;t
+              tbody
+              - let i = 0;
+              each itemticker in listTicker
+                tr
+                  th(scope='row' style='  padding: 100px 0;')
+                    span(style='margin-bottom: 0px; height: 100%; display: flex; justify-content: center; align-content: center;') #{i++}
+                  td(style='display: flex; justify-content: center;')
+                    div(style='height: 200px; width: fit-content;')
+                      .row
+                        .col-sm-8(style='height: 190px; width: 400px; padding-right: 0px; background: linear-gradient(to bottom, #e84c3d 0%, #e84c3d 26%, #ecedef 26%, #ecedef 100%); border-radius: 8px; ')
+                          .row
+                            .col-sm-12
+                              p(style='display: flex; align-items: center; height: 100%; margin-left: 15px; color: #ffffff; font-size: 20px;')
+                                | T&ecirc;n r&#x1EA1;p
+                          .row(style='height: fit-content; margin-top: 10px;')
+                            .col-sm-12(style='height: 40px;')
+                              p(class="text-left", style=' text-transform: uppercase;margin-bottom: 0px; height: fit-content; font-size: 15px; color: #000000; font-weight: bold; margin-left: 15px; margin-top: 8px;')
+                                | #{itemticker.TenPhim}
+                              p(class="text-left", style='margin-left: 15px; text-transform: uppercase; font-size: 13px;')
+                                | MOVIE
+                          .row
+                            .col-sm-12
+                              p(class="text-left labelUser", style='text-transform: uppercase; margin-bottom: 0px; height: fit-content; font-size: 15px; color: #000000; font-weight: bold; margin-left: 15px; margin-top: 8px;')
+                                | 
+                              p(class="text-left", style='margin-left: 15px; text-transform: uppercase; font-size: 13px;')
+                                | Name
+                          .row
+                            .col-sm-2
+                              p(style='font-size: 13px; margin-left: 15px; color: #000000; font-weight: bold; margin-bottom: 0px; ')
+                                | #{itemticker.TenGhe}
+                              p(style='font-size: 13px; margin-left: 15px;  text-transform: uppercase; ')
+                                | Seat
+                            .col-sm-2
+                              p(style='font-size: 13px; margin-left: 15px; color: #000000; font-weight: bold; margin-bottom: 0px; ')
+                                | #{itemticker.Gio}
+                              p(style='font-size: 13px; margin-left: 15px;  text-transform: uppercase; ')
+                                | TIME
+                            .col-sm-2
+                              p(style='font-size: 13px; margin-left: 15px; color: #000000; font-weight: bold; margin-bottom: 0px; ')
+                                | #{itemticker.TenGhe.slice(0,1)}
+                              p(style='font-size: 13px; margin-left: 15px;  text-transform: uppercase; ')
+                                | Row
+                        .col-sm-4(style='background: linear-gradient(to bottom, #e84c3d 0%, #e84c3d 26%, #ecedef 26%, #ecedef 100%); border-radius: 8px;  border-left: 3px dashed #fff; height: 190px; display: flex; align-items: center; justify-content: center;')
+                          .row(style='margin-top: 20px; width: fit-content; margin-left: -20px;  height: fit-content;')
+                            .col-sm-12
+                              p(style='margin-bottom: 0px; align-items: center; color: #e84c3d; font-size: 40px; font-weight: bold; display: flex; justify-content: center;')
+                                | #{itemticker.TenGhe}
+                              p.text-center(style='font-size: 20px;   text-transform: uppercase; ')
+                                | Seat
+                  td(style='  padding: 100px 0;')
+                    span(style='margin-bottom: 0px; height: 100%; display: flex; justify-content: center; align-content: center;') #{itemticker.NgayDat}    
+          br
+    - } else{
+        h1(class="text-center") Bạn chưa đặt vé
+    - } 
+    // .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptHome/scriptindex.js") 
+script(src="javascripts/scriptTicker/script.js") 
+script(src="javascripts/scriptUtil/script.js") 
+

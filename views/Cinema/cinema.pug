@@ -1,0 +1,55 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container(style='height: fit-content;')
+      .row(style='height: fit-content;')
+        .col-sm-8
+          h2.text-center(style='color: #000000;') C&aacute;c r&#x1EA1;p &dstrok;ang ho&#x1EA1;t &dstrok;&#x1ED9;ng
+          .row
+            each rap in listrap
+             p.text-left(style='margin-left: 20px;')
+              a(id=rap.ID,class="ABC") #{rap.TenRap}
+            
+            
+        .col-sm-4
+          h2.text-center(style='color: #000000;') Th&ocirc;ng tin r&#x1EA1;p chi&#x1EBF;u
+          .row
+            .col-sm-12
+              div(style='width: 100%; height: fit-content;')
+                img(id="imgCinema" src='' height='200' width='100%')
+          br
+          .row(style='display: flex; justify-content: center;')
+            h3 Th&ocirc;ng tin li&ecirc;n h&#x1EC7;
+          .row
+            .col-sm-12
+              .row
+                .col-sm-4
+                  h4 &Dstrok;&#x1ECB;a ch&#x1EC9;
+                .col-sm-8
+                  p(id="txtdiachi") T&#x1EA7;ng 7 | H&ugrave;ng V&#x1B0;&#x1A1;ng Plaza 126 H&ugrave;ng V&#x1B0;&#x1A1;ng Qu&#x1EAD;n 5 Tp. H&#x1ED3; Ch&iacute; Minh
+              .row
+                .col-sm-12
+                  button.btn.btn-success(style='width: 100%;' type='button' data-toggle='modal' data-target='#exampleModal')
+                    | Xem B&#x1EA3;n &dstrok;&#x1ED3;
+                  #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                    .modal-dialog.modal-lg
+                      .modal-content
+                        .modal-body
+                          .row(style='height: 500px;')
+                            .col-sm-12
+                              #map(style='width: 100%; height: 100%;')
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptHome/scriptindex.js")
+script(src="javascripts/scriptCinema/script.js",id='field-source', data-fields=JSON.stringify(listrap))
+script(async='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCfuJ_4wQX3NqAQnZB9Bhem2zporH0RPLM&callback=initMap')
+script(src="javascripts/scriptUtil/script.js")
+
+    
+  
+
+

@@ -1,0 +1,64 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+  include ../Utils/menu.pug
+  main.main-content
+    .container
+      .row(style='height: 300px;')
+        .col-sm-7(style='height: 100%; display: flex; justify-content: center ; align-items: center;')
+          // Ticker
+          div(style='height: 200px; width: fit-content;')
+            .row
+              .col-sm-8(style='height: 190px; width: 400px; padding-right: 0px; background: linear-gradient(to bottom, #e84c3d 0%, #e84c3d 26%, #ecedef 26%, #ecedef 100%); border-radius: 8px; ')
+                .row
+                  .col-sm-12
+                    p(id="tenrap",style='display: flex; align-items: center; height: 100%; margin-left: 15px; color: #ffffff; font-size: 20px;') T&ecirc;n r&#x1EA1;p
+                .row(style='height: fit-content; margin-top: 10px;')
+                  .col-sm-12(style='height: 40px;')
+                    p(id="tenphim",style='text-transform: uppercase;margin-bottom: 0px; height: fit-content; font-size: 15px; color: #000000; font-weight: bold; margin-left: 15px; margin-top: 8px;') C&ocirc; g&aacute;i &dstrok;&#x1EBF;n t&#x1EEB; h&ocirc;m qua
+                    p(style='margin-left: 15px; text-transform: uppercase; font-size: 13px;') MOVIE
+                .row
+                  .col-sm-12
+                    p(class="tenng",style='text-transform: uppercase; margin-bottom: 0px; height: fit-content; font-size: 15px; color: #000000; font-weight: bold; margin-left: 15px; margin-top: 8px;')
+                    p(style='margin-left: 15px; text-transform: uppercase; font-size: 13px;') Name
+                .row
+                  .col-sm-2
+                    p(class="tenghe",style='font-size: 13px; margin-left: 15px; color: #000000; font-weight: bold; margin-bottom: 0px; ') 156
+                    p(style='font-size: 13px; margin-left: 15px;  text-transform: uppercase; ') Seat
+                  .col-sm-2
+                    p(id="thoigian",style='font-size: 13px; margin-left: 15px; color: #000000; font-weight: bold; margin-bottom: 0px; ') 12:00
+                    p(style='font-size: 13px; margin-left: 15px;  text-transform: uppercase; ') TIME
+                  .col-sm-2
+                    p(id="day",style='font-size: 13px; margin-left: 15px; color: #000000; font-weight: bold; margin-bottom: 0px; ') A
+                    p(style='font-size: 13px; margin-left: 15px;  text-transform: uppercase; ') Row
+              .col-sm-4(style='background: linear-gradient(to bottom, #e84c3d 0%, #e84c3d 26%, #ecedef 26%, #ecedef 100%); border-radius: 8px;  border-left: 3px dashed #fff; height: 190px; display: flex; align-items: center; justify-content: center;')
+                .row(style='margin-top: 20px; width: fit-content; margin-left: -20px;  height: fit-content;')
+                  .col-sm-12
+                    p(class="tenghe",style='margin-bottom: 0px; align-items: center; color: #e84c3d; font-size: 40px; font-weight: bold; display: flex; justify-content: center;') 156
+                    p.text-center(style='font-size: 20px;   text-transform: uppercase; ') Seat
+        .col-sm-1(style='display: flex; justify-content: center ;')
+          div(style='border-left: 1px solid green;height: 300px;')
+        .col-sm-4(style='height: 100%;')
+          h3.text-center Th&ocirc;ng tin thanh to&aacute;n
+          .form-group.row
+            label.col-sm-2.col-form-label(style='padding: 0px 0px 0px 0px; display: flex; align-items: center;' for='staticEmail') H&#x1ECD; T&ecirc;n:
+            .col-sm-10(style='padding-left: 8px;')
+              input#inputPassword.form-control(class="usertt" type='text' placeholder="Ten nguoi dung" readonly)
+          .form-group.row
+            label.col-sm-2.col-form-label(style='padding: 0px 0px 0px 0px; display: flex; align-items: center;' for='staticEmail') Gi&aacute; v&eacute;:
+            .col-sm-10(style='padding-left: 8px;')
+              label(style='margin-bottom: 0px; width: 100%; padding: 0px 0px 0px 0px; display: flex; align-items: center; color: #000000; font-weight: bold;' for='staticEmail') 45000 &Dstrok;&#x1ED3;ng
+          .row
+            .col-sm-6
+              button.btn.btn-success(id="btnThanhToan",style='width: 100%;' type='button') Thanh to&aacute;n
+            .col-sm-6
+              button.btn.btn-dark(style='width: 100%;' type='button') Quay l&#x1EA1;i
+          br
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src="javascripts/scriptHome/scriptindex.js") 
+script(src="javascripts/scriptthanhtoan/script.js")
+script(src="javascripts/scriptUtil/script.js") 
+

@@ -1,0 +1,101 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+    include ../Utils/menu.pug
+    main.main-content
+        .container(style='width: fit-content; height: 850px;')
+            .card(style='height: 100%;')
+              form(action="xulydangky", method="post") 
+                .card-body
+                    .row
+                        .col-sm-12
+                            .row
+                                .col-sm-12.text-center
+                                    h1(style='color: red;') &Dstrok;&abreve;ng k&yacute;
+                            form(action='' method='post')
+                                br
+                                .row
+                                    .col-sm-4()
+                                        h4(style='position:relative; top:10px;  height: 100%;')
+                                            | H&#x1ECD; t&ecirc;n:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name="txthoten" , type='text')
+                                        br
+                                        span(id="spantbht")
+                                    
+                                br
+                                .row
+                                    .col-sm-4
+                                        h4(style='position:relative; top:10px; height: 100%;')
+                                            | T&agrave;i kho&#x1EA3;n:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name="txttk",type='text')
+                                        br
+                                        span(id="spantk")
+                                br
+                                .row
+                                    .col-sm-4
+                                        h4(style='position:relative; top:10px; height: 100%;')
+                                            | M&#x1EAD;t kh&#x1EA9;u:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name="txtpass",type='password')
+                                        br
+                                        span(id="spantpass")
+                                br
+                                .row
+                                    .col-sm-4
+                                        h4(style='position:relative; top:10px; height: 100%;')
+                                            | X&aacute;c nh&#x1EAD;n m&#x1EAD;t kh&#x1EA9;u:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name="txtpassverti",type='password')
+                                        br
+                                        span(id="spanpassverti")
+                                br
+                                .row
+                                    .col-sm-4
+                                        h4(style='position:relative; top:10px; height: 100%;')
+                                            | Email:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name ="txtemail",type='email')
+                                        br
+                                        span(id="spanemail")
+                                br
+                                .row
+                                    .col-sm-4
+                                        h4(style='position:relative; top:10px; height: 100%;')
+                                            | Ng&agrave;y sinh:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name="txtngaysinh",type='date')
+                                        br
+                                        span(id="spanngaysinh")
+                                br
+                                br
+                                .row
+                                    .col-sm-4
+                                        h4(style='position:relative; top:10px; height: 100%;')
+                                            | S&#x1ED1; &dstrok;i&#x1EC7;n tho&#x1EA1;i:
+                                    .col-sm-8
+                                        input#inputPassword.form-control(name="txtsdt" ,type='text')
+                                        br
+                                        span(id="spansdt")
+                                br
+                                .row
+                                    .col-sm-6.text-center
+                                        button.btn.btn-success(id="btnsubmit",type='submit' style='width:200px;')
+                                            | Đăng ký
+                                    .col-sm-6.text-center
+                                        button.btn.btn-dark(type='button' style='width:200px;')
+                                            | H&#x1EE7;y b&#x1ECF;
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(src='javascripts/scriptDangKy/script.js')
+script(src="javascripts/scriptUtil/script.js") 
+script.  
+    let msg = "#{message}";
+    if(msg){
+        alert(msg)
+    }
+
+

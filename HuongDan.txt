@@ -1,0 +1,19 @@
+Luồng đi của project 
+  Bước 1: Khi client request sẽ đi vào route
+  Bước 2: Từ route sẽ đi vào controller
+  Bước 3: Controller sẽ tương tác với model
+  Bước 4: Controller sẽ trả về một view trên màn hình trình duyệt
+  
+  
+  
+ Cách làm 
+  Bước 1: Tạo file route tương ứng với chức năng và suất đối tượng route ra
+  Bước 2: Tạo file controller để xử lý
+  Bước 3: Tạo file module để tưởng tác cơ sở dữ liệu
+  Bước 4: nạp file controller vào file route
+  Bước 5 : nạp file vào route vào file index trong thư mục route đã có sẵn
+  
+  
+  
+Nếu có điều gì thắc mắc hay gặp khó khăn hoạc chưa hiểu nội dung ở trên xin liên hệ Quang Tín nhé
+  

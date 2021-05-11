@@ -1,0 +1,79 @@
+doctype html
+include ../Utils/header.pug
+#site-content
+    include ../Utils/menu.pug
+    main.main-content
+        .container
+            div(style='border: 1px solid black; background-color: black; border-radius: 8px;')
+                h2.text-center(style='margin-top: 15px; color: white; width: 100%;') Th&ocirc;ng tin c&aacute; nh&acirc;n
+            .text-center(style='margin-top: 15px;')
+                img(src='images/iconprofile.png' style='border: 1px solid black; border-radius: 100px;')
+            .text-center(style='margin-top: 8px;')
+                p(style='font-size: 20px;')
+                    | Xin ch&agrave;o
+                h1(class="hoten" style='color: black;') Không có thông tin
+                p V&#x1EDB;i trang n&agrave;y, b&#x1EA1;n s&#x1EBD; qu&#x1EA3;n l&yacute; &dstrok;&#x1B0;&#x1EE3;c t&#x1EA5;t c&#x1EA3; th&ocirc;ng tin t&agrave;i kho&#x1EA3;n c&#x1EE7;a m&igrave;nh.
+                p
+            .row
+                .col-sm-12
+                    #container-tt.row
+                        .col-sm-12
+                            h3(style='color: black;') Th&ocirc;ng tin t&agrave;i kho&#x1EA3;n
+                            hr
+                            .row
+                                .col-sm-1(style='display: flex; align-items: center;')
+                                    p(style='font-size: 18px;') Li&ecirc;n h&#x1EC7;
+                                .col-sm-1
+                                    button.btn.btn-secondary(id="btnthaydoi" style='width: 100px;  height: 25px; display: flex; align-items: center; justify-items: center;' type='button') Thay &dstrok;&#x1ED5;i
+                            .row
+                                .col-sm-1(style='display: flex; align-items: center;')
+                                    p(style='font-size: 13px;') T&ecirc;n: 
+                                .col-sm-2
+                                    p(class="hoten") Ng&ocirc; L&acirc;m Quang T&iacute;n
+                            .row
+                                .col-sm-1(style='display: flex; align-items: center;')
+                                    p(style='font-size: 13px;') Email: 
+                                .col-sm-2
+                                    p(id="email") quangtin131299@gmail.com
+                            .row
+                                .col-sm-1(style='display: flex; align-items: center;')
+                                    p(style='font-size: 13px;') &Dstrok;i&#x1EC7;n tho&#x1EA1;i: 
+                                .col-sm-1
+                                    p(id="sdt") 0843331299
+                    #container-edit.row(style='display: none ;')
+                        .col-sm-12
+                            .row
+                                .col-sm-6(style='display: flex; justify-content: center;')
+                                    .input-group.flex-nowrap(style='width: 300px;')
+                                        .input-group-prepend
+                                            span#addon-wrapping.input-group-text H&#x1ECD; t&ecirc;n
+                                        input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='addon-wrapping')
+                                .col-sm-6(style='display: flex; justify-content: center;')
+                                    .input-group.flex-nowrap(style='width: 300px;')
+                                        .input-group-prepend
+                                            span#addon-wrapping.input-group-text Email
+                                        input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='addon-wrapping')
+                            br
+                            .row
+                                .col(style='display: flex; justify-content: center;')
+                                    .input-group.flex-nowrap(style='width: 300px;')
+                                        .input-group-prepend
+                                            span#addon-wrapping.input-group-text S&#x1ED1; &dstrok;i&#x1EC7;n tho&#x1EA1;i
+                                        input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='addon-wrapping')
+                                .col
+                                    .row
+                                        .col-sm-6(style='display: flex; justify-content: flex-end;')
+                                            button.btn.btn-success(type='button') C&#x1EAD;p nh&#x1EAD;t
+                                        .col-sm-6(style='display: flex; justify-content: flex-start;')
+                                            button#btnhuybo.btn.btn-dark(type='button') Hủy bỏ
+                            br
+// .container
+include ../Utils/footer.pug
+script(src='javascripts/plugins.js')
+script(src='javascripts/app.js')
+script(id="user-source" src="javascripts/scriptHome/scriptindex.js", data-user=JSON.stringify(user))
+script(src="javascripts/scriptCaNhan/script.js") 
+script(src="javascripts/scriptUtil/script.js") 
+
+
+
